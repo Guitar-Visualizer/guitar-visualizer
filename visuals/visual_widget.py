@@ -5,7 +5,8 @@ Visual rendering widget
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QTimer
 from PySide6.QtGui import QPainter
-
+from config.color_mapping import ColorMapper
+from visuals.effects.base_effect import EffectManager
 
 class VisualWidget(QWidget):
     """Main visual canvas"""
