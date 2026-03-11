@@ -15,7 +15,7 @@ class WatercolorBloom(Effect):
     def __init__(self, x: float, y: float, color: QColor):
         super().__init__(x, y, color)
        
-        self.max_radius = CANVAS_HEIGHT * 0.15
+        self.max_radius = CANVAS_HEIGHT * 0.40
         self.is_sustained = True
         self.lifetime = float('inf')
         self.radius = 0.0

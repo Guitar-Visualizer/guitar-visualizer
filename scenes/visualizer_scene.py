@@ -22,6 +22,7 @@ class VisualizerScene(QWidget):
         layout = QVBoxLayout()
         layout.addWidget(self.visual_widget)
         self.setLayout(layout)
+        self.visual_widget.setFocus()
             
     
     def start_new_session(self):
