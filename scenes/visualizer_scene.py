@@ -4,6 +4,9 @@ Main visualizer scene
 
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import Signal
+from visuals.visual_widget import VisualWidget
+from audio.audio_engine import AudioEngine
+from PySide6.QtWidgets import QVBoxLayout
 
 
 class VisualizerScene(QWidget):
@@ -14,15 +17,16 @@ class VisualizerScene(QWidget):
     def __init__(self, project_manager):
         super().__init__()
         self.project_manager = project_manager
-        # TODO: Setup UI with visual canvas
-        # TODO: Add control bar with record/stop button
-        # TODO: Add back button
-        pass
+        self.visual_widget = VisualWidget()
+        self.audio_engine = AudioEngine(self.visual_widget)
+        layout = QVBoxLayout()
+        layout.addWidget(self.visual_widget)
+        self.setLayout(layout)
+            
     
     def start_new_session(self):
-        """Start a new recording session"""
-        # TODO: Create new session
-        # TODO: Initialize audio engine
+        self.audio_engine.start()
+
         # TODO: Initialize recorder
         pass
     
