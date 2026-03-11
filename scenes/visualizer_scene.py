@@ -27,10 +27,8 @@ class VisualizerScene(QWidget):
     def start_new_session(self):
         self.audio_engine.start()
 
-        # TODO: Initialize recorder
-        pass
+    
     
     def _toggle_recording(self):
         """Start or stop recording"""
-        # TODO: Implement recording toggle
         pass

@@ -4,8 +4,8 @@ Main application window
 from PySide6.QtWidgets import QMainWindow, QStackedWidget
 from scenes.visualizer_scene import VisualizerScene
 from PySide6.QtWidgets import QMainWindow, QStackedWidget
-from scenes.welcome_scene import WelcomeScene
-from scenes.gallery_scene import GalleryScene
+#from scenes.welcome_scene import WelcomeScene
+#from scenes.gallery_scene import GalleryScene
 from scenes.visualizer_scene import VisualizerScene
 
 
@@ -26,14 +26,7 @@ class GuitarVisualApp(QMainWindow):
         self.stack.setCurrentWidget(self.visualizer)
         self.visualizer.start_new_session()
         
-        # TODO: Initialize project manager
         
-        # TODO: Create stacked widget for scenes
-        
-        # TODO: Initialize scenes
-        
-        # TODO: Start with welcome screen
-        pass
     
     def show_welcome(self):
         """Show welcome screen"""

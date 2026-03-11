@@ -5,7 +5,8 @@ Watercolor bloom effect
 from PySide6.QtGui import QPainter, QColor, QBrush, QRadialGradient
 from PySide6.QtCore import QRectF, Qt
 from visuals.effects.base_effect import Effect
-from config.settings import CANVAS_HEIGHT
+
+from visuals.effects.base_effect import CANVAS_WIDTH, CANVAS_HEIGHT
 
 
 class WatercolorBloom(Effect):
@@ -26,6 +27,9 @@ class WatercolorBloom(Effect):
         super().update(dt)
         if self.is_sustained:
             self.radius += self.max_radius*dt
+            if self.radius >= self.max_radius:  # stop growing at max
+                self.radius = self.max_radius
+                self.is_sustained = False
     
     def render(self, painter: QPainter):
         if self.radius <= 0:

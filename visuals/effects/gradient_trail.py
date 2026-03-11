@@ -1,8 +1,9 @@
 from PySide6.QtGui import QPainter, QColor, QBrush, QLinearGradient
 from PySide6.QtCore import QRectF, Qt
 from visuals.effects.base_effect import Effect
-from config.settings import CANVAS_HEIGHT
+from PySide6.QtWidgets import QApplication
 
+from visuals.effects.base_effect import CANVAS_WIDTH, CANVAS_HEIGHT
 
 class GradientTrail(Effect):
      def __init__(self, x: float, y: float, end_y: float, start_color: QColor, end_color: QColor):

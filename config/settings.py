@@ -2,9 +2,10 @@
 Application settings
 """
 
-
 class Settings:
     """Global settings"""
+    CANVAS_WIDTH = 800
+    CANVAS_HEIGHT = 600
     
     # Audio
     SAMPLE_RATE = 44100
@@ -22,3 +23,5 @@ class Settings:
     
     # Paths
     PROJECTS_DIR = "projects"
+
+
